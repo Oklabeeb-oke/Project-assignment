@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oklabeeb | Data Science Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #ffffff;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .hero {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+        }
+        .hero-left {
+            flex: 1;
+            background-color: #1e293b;
+            color: #ffffff;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            clip-path: polygon(0 0, 30% 0, 100% 100%, 0 100%);
+        }
+        .profile-img {
+            width: 430px;
+            height: 600px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .navbar a {
+            color: #e1e3e6;
+            font-weight: bold;
+        }
+        .navbar a:hover  {
+            color: #38bdf8;
+        }
+        .hero-right{
+            flex:1;
+            background-color: #1321a1;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            clip-path: polygon(70% 0, 100% 0, 100% 100%, 0 100%);
+        }
+        
+        .hero-right h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: black;
+        }
+        .hero-right h3 {
+            font-size: 22px;
+            color: #838486;
+            margin-bottom: 30px;
+
+        }
+        .socials a {
+            margin-right: 20px;
+            font-weight: bold;
+            color: #0bc5e6;
+        }
+        .socials a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 70px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .about-text {
+            max-width: 750px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .project-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+        }
+        .project-card img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .project-content {
+            padding: 20px;
+        }
+        .tech-stack span {
+            display: inline-block;
+            background: #e2e8f0;
+            padding: 6px 12px;
+            margin: 6px 6px 0 0;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+        .project-links {
+            margin-top: 15px;
+        }
+        .project-links a {
+            margin-right: 15px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        .project-links a:hover {
+            color: #188d83;
+            text-decoration: underline;
+        }
+        @media(max-width: 900px) {
+            .hero {
+                flex-direction: column;
+            }
+            .hero-right {
+                clip-path: none;
+            }
+            .navbar {
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 100%;
+            }
+        }
+        @media(max-width: 480px) {
+            .hero-right h1 {
+                font-size: 28px
+            }
+            .hero-right h3 {
+                font-size: 16px;
+            }
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-left">
+            <nav class="navbar">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contacts">Contact</a>
+            </nav>
+            <img src="./project image 2.png" alt="Profile picture" class="profile-img">
+        </div>
+        <div class="hero-right">
+            <h1>Oklabeeb</h1>
+            <h3>Aspiring Data Scientist</h3>
+            <div class="socials">
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </header> 
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="about-text">
+            <br> I am an aspiring Data Scientist with a deep interest in understanding data, uncovering patterns, and transforming complex information into meaningful insights that support informed decision-making. My journey into data science is shaped by curiosity, analytical thinking, and a strong desire to solve real-world problem using data-driven methods.
+            <br>
+            <br>I work primarily with python and data analysis libraries to clean, explore, and visualize datasets, turning raw data into structured and interpretable results. Through hands=on projects, I have applied statistical thinking and foundational machine learning techniques to analyze trends, build predictive models, and evaluate outcomes. I enjoy the entire data lifecycle - from asking the right questions and preparing data, to interpreting results and communicating insights clearly.
+            <br>
+            <br>Beyond technical tools, I place strong value on clarity, accuracy, and continous improvement. I am intentional about understanding not just how models work, but why they work, and where their limitations lie. The mindset helps me approach data problems thoughtfully, ensuring that insights are both reliable and relevant. I believe that effective data science is not only about algorithms, but also about context, reasoning, and responsible interpretation.
+            <br>
+            <br>I am continously developing my skills through structured learning, personal projects, and experimentation. Each project i undertake is an opportunity to strenghten my problem-solving abilities, improve my technical depth, and refine how i communicate results to both technical and non-technical audiences. I am particularly interested in applying data science to domains where insights can drive meaningful impact, improve performance, and support better decision-making. 
+            <br>
+            <br> My long term goal is to grow a well-rounded Data Scientist who contributes value through thoughtful analysis, practical modelling, and clear storytelling with data. I am motivated, disciplined, and committed to lifelong learning, and i look forward to opportunities that allow me to apply my skills, collaborate with others, and continue evolving in the field of data science.
+        </p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <p class="about-text"> I have developed a solid foundation in data science through hands-on practice, structured learning, and continous self improvement. My skills set combines technical proficiency with analytical thinking, enabling me to work effectively across different stages of the data science workflow.
+            I am proficient in python for data analysis and modeling, using libraries such as pandas, NumPy, and Matplotlib to clean datasets, perform exploratory data analysis, and visualize insights. I am comfortable working with structured data, handling missing values, and preparing datasets for analysis and modeling.
+            I have experience applying machine learning fundamentals using Scikit-learn, including regression techniques, basic classification, and model evaluation. I understand key concepts such as feature selection, model performance metrics, and the importance of avoiding overfitting when building predictive models.
+            In addition to data science tools, I possess practical knowledge of web technologies such as HTML, CSS, and JavaScript, which I use to build and present data-driven projects in a clear and accessible way. This allows me to communicate results effectively through well-structured and visually appealing interfaces.
+            Beyond technical skills, I bring strong problem-solving abilities, attention to details, and a commitment to continous learning. I am disciplined in my approach to work, adaptable to new tools and technologies, and motivated to improve through feedback, collaboration, and real-world application of my skills.
+        </p>
+        <br>
+        <br>
+        <div class="tech-stack">
+            <span>Python</span>
+            <span>Data Analysis</span>
+            <Span>Machine Learning</Span>
+            <span>Pandas</span>
+            <span>Numpy</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+        </div>
+
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="./project image 1.jpg" alt="Student Performance Analysis">
+                <div class="project-content">
+                    <h3>Student performance Analysis</h3>
+                    <p>Exploratory analysis of academic performance data to uncover trends.</p>
+                    <div class="tech-stack">
+                        <span>Python</span><span>Pandas</span><span>Matplotlib</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#">GitHub</a>
+                        <a href="#">Report</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./project image 3.jpg" alt="Sales Prediction">
+                <div class="project-content">
+                    <h3>Sales Prediction Model</h3>
+                    <p>Regression model developed to predict future sales.</p>
+                    <div class="tech-stack">
+                        <span>Python</span><span>Scikit-learn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#">GitHub</a>
+                        <a href="#">Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacts">
+        <h2>Contact</h2>
+        <p>Email: okehabeeb3@gmail.com</p>
+        <p>Phone: +2347025543166</p>
+    </section>
+    <footer id="Contact">
+        <p> &copy; 2026 Oklabeeb | Data science Portfolio</p>
+    </footer>
+</body>
+</html>
